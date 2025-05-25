@@ -15,8 +15,8 @@ class _PostListWithoutModelState extends State<PostListWithoutModel> {
   _getPost() {
     apiservice().getPostWithoutmodel().then((value) {
       setState(() {
-        postList = value;      // ✅ assign fetched data to postList
-        isReady = true;        // ✅ mark as ready to display
+        postList = value;
+        isReady = true;
       });
     }).onError((error, stackTrace) {
       print(error);
@@ -25,7 +25,7 @@ class _PostListWithoutModelState extends State<PostListWithoutModel> {
 
   @override
   void initState() {
-    super.initState();         // ✅ good to call super first
+    super.initState();
     _getPost();
   }
 
@@ -37,7 +37,7 @@ class _PostListWithoutModelState extends State<PostListWithoutModel> {
         title: const Text("Posts without model"),
       ),
       body: !isReady
-          ? const Center(child: CircularProgressIndicator()) // ⬅️ fixed condition
+          ? const Center(child: CircularProgressIndicator())
           : ListView.builder(
         itemCount: postList.length,
         itemBuilder: (context, index) {
