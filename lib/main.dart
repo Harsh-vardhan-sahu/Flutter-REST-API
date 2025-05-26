@@ -1,6 +1,7 @@
 import 'package:api/screenwithmodel.dart';
 import 'package:api/screenwithoutmodel.dart';
 import 'package:flutter/material.dart';
+import 'home.dart';
 import 'listmodel_screen.dart';
 import 'listwithoutmodel_screen.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
   debugShowCheckedModeBanner: false,
-  home:PostListWithoutModel() ,
+  home:HomeScreen() ,
     );
   }
 }
