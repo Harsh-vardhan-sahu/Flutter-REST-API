@@ -36,7 +36,7 @@ class _TestScreenState extends State<TestScreen> {
           return ListTile(
 
             title: Text(user.name.first),
-            subtitle: Text(phone),
+            subtitle: Text(user.location.postcode),
             tileColor:color,
           );
         },
